@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { cn } from '@repo/design-system/lib/utils';
-import { Badge } from '@repo/design-system/components/ui/badge';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 export function CVDemoGraphic() {
   const [currentPage, setCurrentPage] = useState(0);

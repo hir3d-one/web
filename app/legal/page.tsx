@@ -1,5 +1,5 @@
-import { Container } from '@repo/design-system/components/container';
-import { Prose } from '@repo/design-system/components/prose';
+import { Container } from '@/components/container';
+import { Prose } from '@/components/prose';
 import { ArrowRightIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';

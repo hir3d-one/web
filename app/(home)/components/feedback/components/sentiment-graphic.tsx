@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@repo/design-system/lib/utils';
+import { cn } from '@/lib/utils';
 import {
   LazyMotion,
   domMax,
@@ -11,8 +11,8 @@ import {
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import { LoadingCircle } from '@repo/design-system/components/loading-circle';
-import { SentimentEmoji } from '@repo/design-system/components/sentiment-emoji';
+import { LoadingCircle } from '@/components/loading-circle';
+import { SentimentEmoji } from '@/components/sentiment-emoji';
 import type { ComponentProps, FC } from 'react';
 
 const feedback: {

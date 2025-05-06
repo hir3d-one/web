@@ -1,6 +1,6 @@
 'use client';
 
-import { Prose } from '@repo/design-system/components/prose';
+import { Prose } from '@/components/prose';
 import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import { useRef } from 'react';
 

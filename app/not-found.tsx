@@ -1,7 +1,7 @@
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Prose } from '@repo/design-system/components/prose';
-import { Button } from '@repo/design-system/components/ui/button';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
+import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

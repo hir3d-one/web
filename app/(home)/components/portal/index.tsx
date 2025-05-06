@@ -1,9 +1,9 @@
 import { Card } from '@/app/(home)/components/card';
 import { FeatureHero } from '@/components/feature-hero';
 import { features } from '@/lib/features';
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Button } from '@repo/design-system/components/ui/button';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import type { HTMLAttributes } from 'react';
 

@@ -1,9 +1,9 @@
 'use client';
 
-import { LoadingCircle } from '@repo/design-system/components/loading-circle';
-import { Prose } from '@repo/design-system/components/prose';
-import { Button } from '@repo/design-system/components/ui/button';
-import { cn } from '@repo/design-system/lib/utils';
+import { LoadingCircle } from '@/components/loading-circle';
+import { Prose } from '@/components/prose';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { SparklesIcon } from 'lucide-react';
 import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import { useRef, useState } from 'react';

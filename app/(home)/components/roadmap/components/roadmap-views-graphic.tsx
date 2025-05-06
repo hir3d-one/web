@@ -1,7 +1,7 @@
 'use client';
 
-import { Select } from '@repo/design-system/components/precomposed/select';
-import { Switch } from '@repo/design-system/components/precomposed/switch';
+import { Select } from '@/components/precomposed/select';
+import { Switch } from '@/components/precomposed/switch';
 
 import { useState } from 'react';
 

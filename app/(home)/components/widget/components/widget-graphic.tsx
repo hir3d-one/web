@@ -1,4 +1,4 @@
-import { CodeBlock } from '@repo/design-system/components/code-block';
+import { CodeBlock } from '@/components/code-block';
 
 const embedCode = `<script>
   (function() {

@@ -1,6 +1,6 @@
-import Climate from '@repo/design-system/components/climate';
-import { Container } from '@repo/design-system/components/container';
-import { Prose } from '@repo/design-system/components/prose';
+import Climate from '@/components/climate';
+import { Container } from '@/components/container';
+import { Prose } from '@/components/prose';
 import type { Metadata } from 'next';
 import { PricingTable } from './components/pricing-table';
 

@@ -1,11 +1,11 @@
-import '@repo/design-system/styles/globals.css';
+import '@/styles/globals.css';
 import { CallToAction } from '@/components/cta';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { env } from '@/env';
 import { AnalyticsProvider } from '@repo/analytics';
-import { DesignSystemProvider } from '@repo/design-system/components/provider';
-import { fonts } from '@repo/design-system/lib/fonts';
+import { DesignSystemProvider } from '@/components/provider';
+import { fonts } from '@/lib/fonts';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
 

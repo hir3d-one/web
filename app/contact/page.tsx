@@ -1,6 +1,6 @@
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
-import { createMetadata } from '@repo/seo/metadata';
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import { ContactForm } from './components/contact-form';
 

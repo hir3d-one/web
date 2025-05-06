@@ -1,5 +1,5 @@
-import { formatBytes } from '@repo/lib/format';
-import { parseError } from '@repo/lib/parse-error';
+import { formatBytes } from '@/lib/format';
+import { parseError } from '@/lib/parse-error';
 import mime from 'mime/lite';
 import { useRef, useState } from 'react';
 import type { ChangeEventHandler, DragEventHandler } from 'react';

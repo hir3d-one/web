@@ -2,7 +2,6 @@
 
 import { Prose } from '@/components/prose';
 import { Button } from '@/components/ui/button';
-import * as Sentry from '@sentry/nextjs';
 import type Error from 'next/error';
 import { useEffect } from 'react';
 
@@ -11,11 +10,7 @@ type GlobalErrorProperties = {
   readonly reset: () => void;
 };
 
-const GlobalError = ({ error, reset }: GlobalErrorProperties) => {
-  useEffect(() => {
-    Sentry.captureException(error);
-  }, [error]);
-
+const GlobalError = ({ error, reset }: GlobalErrorProperties) => {  
   return (
     <html
       lang="en"

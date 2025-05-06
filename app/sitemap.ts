@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { baseUrl } from '@repo/lib/consts';
+import { baseUrl } from '@/lib/consts';
 import type { MetadataRoute } from 'next';
 
 const pages = fs

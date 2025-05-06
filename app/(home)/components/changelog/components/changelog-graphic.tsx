@@ -4,17 +4,6 @@ import { useInView } from 'motion/react';
 import dynamic from 'next/dynamic';
 import { useRef } from 'react';
 
-const Editor = dynamic(
-  async () => {
-    const component = await import(
-      /* webpackChunkName: "editor" */
-      '@repo/editor'
-    );
-
-    return component.Editor;
-  },
-  { ssr: false }
-);
 
 const defaultContent = {
   type: 'doc',
@@ -88,7 +77,6 @@ export const ChangelogGraphic = () => {
 
   return (
     <div className="h-full w-full overflow-auto p-6">
-      <Editor defaultValue={defaultContent} />
     </div>
   );
 };

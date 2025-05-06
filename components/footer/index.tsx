@@ -1,7 +1,6 @@
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
-import { Status } from '@repo/observability/status';
 import { FooterLink } from './footer-link';
 
 const links = [
@@ -48,7 +47,6 @@ export const Footer = () => (
         <p className="text-muted-foreground text-sm">
           &copy; Hir3d {new Date().getFullYear()}. All rights reserved.
         </p>
-        <Status />
       </div>
       <div className="col-start-3 flex flex-col gap-4">
         {links.map(({ href, name }) => (

@@ -1,4 +1,4 @@
-import { env } from '@/env';
+// import { env } from '@/env';
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
@@ -33,7 +33,7 @@ const links = [
     icon: MessageSquareIcon,
   },
   {
-    href: env.HIR3D_DOCS_URL,
+    href: process.env.HIR3D_DOCS_URL || 'https://docs.example.com',
     label: 'Docs',
     icon: BookIcon,
   },

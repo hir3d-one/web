@@ -55,6 +55,7 @@
     "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
     "@types/node": "22.10.5",
     "@types/react": "19.0.4",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.21",
     "fumadocs-core": "^14.7.2",
     "postcss": "^8.5.3",

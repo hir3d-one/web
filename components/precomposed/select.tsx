@@ -1,7 +1,7 @@
 'use client';
 
 import { useMeasure } from '@react-hookz/web';
-import { createFuse } from '@repo/lib/fuse';
+import { createFuse } from '@/lib/fuse';
 import { useCommandState } from 'cmdk';
 import { CheckIcon, ChevronsUpDown, PlusIcon } from 'lucide-react';
 import { useCallback, useId, useState } from 'react';

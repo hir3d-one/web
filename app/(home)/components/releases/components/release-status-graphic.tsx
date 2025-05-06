@@ -1,40 +1,40 @@
 'use client';
 
-import type { release_state } from '@prisma/client';
-import { tailwind } from '@repo/tailwind-config';
+import colors from 'tailwindcss/colors';
 import { useInView } from 'motion/react';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
-const statuses: {
-  name: string;
-  id: release_state;
-  color: string;
-}[] = [
-  {
-    name: 'Planned',
-    id: 'PLANNED',
-    color: tailwind.theme.colors.gray[700],
-  },
-  {
-    name: 'In Progress',
-    id: 'ACTIVE',
-    color: tailwind.theme.colors.amber[500],
-  },
-  {
-    name: 'Completed',
-    id: 'COMPLETED',
-    color: tailwind.theme.colors.emerald[500],
-  },
-  {
-    name: 'Cancelled',
-    id: 'CANCELLED',
-    color: tailwind.theme.colors.rose[500],
-  },
-];
+const { gray, amber, emerald, rose } = colors;
 
 export const ReleaseStatusGraphic = () => {
   const reference = useRef<HTMLDivElement>(null);
   const inView = useInView(reference, { once: true, amount: 'all' });
+  const [statuses, setStatuses] = useState<any[]>([]);
+
+  useEffect(() => {
+    setStatuses([
+      {
+        name: 'Planned',
+        id: 'PLANNED',
+        color: gray[700],
+      },
+      {
+        name: 'In Progress',
+        id: 'ACTIVE',
+        color: amber[500],
+      },
+      {
+        name: 'Completed',
+        id: 'COMPLETED',
+        color: emerald[500],
+      },
+      {
+        name: 'Cancelled',
+        id: 'CANCELLED',
+        color: rose[500],
+      },
+    ]);
+  }, []);
 
   if (!inView) {
     return <div ref={reference} />;

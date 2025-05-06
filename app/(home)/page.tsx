@@ -1,6 +1,5 @@
-import { env } from '@/env';
-// import { database } from '@repo/backend/database';
-import { createMetadata } from '@repo/seo/metadata';
+
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { ReactElement } from 'react';
 import { Activity } from './components/activity';

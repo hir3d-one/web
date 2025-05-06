@@ -15,7 +15,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { handleError } from '@/lib/handle-error';
-import { emailRegex } from '@repo/lib/email';
+import { emailRegex } from '@/lib/email';
 import { Suspense } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

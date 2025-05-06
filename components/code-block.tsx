@@ -10,7 +10,6 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import { CheckIcon, CopyIcon, DownloadIcon } from 'lucide-react';
-import { useCopyToClipboard } from '../hooks/use-copy-to-clipboard';
 import { Button } from './ui/button';
 
 type CodeBlockProperties = {
@@ -63,8 +62,6 @@ export const generateRandomString = (
 
 export const CodeBlock = memo(
   ({ language, code, showHeader }: CodeBlockProperties) => {
-    const { isCopied, copyToClipboard } = useCopyToClipboard();
-
     const downloadAsFile = () => {
       if (typeof window === 'undefined') {
         return;
@@ -113,9 +110,8 @@ export const CodeBlock = memo(
                   variant="ghost"
                   size="icon"
                   className="text-xs focus-visible:ring-1 focus-visible:ring-slate-700 focus-visible:ring-offset-0"
-                  onClick={() => copyToClipboard(code)}
                 >
-                  {isCopied ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
+                  <CopyIcon size={16} />
                   <span className="sr-only">Copy code</span>
                 </Button>
               </div>

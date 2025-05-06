@@ -1,4 +1,4 @@
-import { baseUrl } from '@repo/lib/consts';
+import { baseUrl } from '@/lib/consts'
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {

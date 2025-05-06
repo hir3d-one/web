@@ -74,7 +74,7 @@ export const Customers = ({
       {...properties}
     >
       <LazyMotion features={domAnimation}>
-        <Container className="relative flex flex-col items-center justify-between gap-12 border-x border-transparent dark:border-gray-800 py-12 sm:flex-row sm:gap-16">
+        <Container className="relative flex flex-col items-center justify-between gap-12 border-x border-transparent dark:border-gray-800 py-2 sm:flex-row sm:gap-16">
           <m.p
             className="text-lg text-muted-foreground dark:text-gray-300 sm:max-w-xs font-medium"
             initial={{ opacity: 0 }}
@@ -95,7 +95,7 @@ export const Customers = ({
                 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <div className="w-full max-w-[280px] h-[120px] flex items-center justify-center overflow-hidden rounded-xl shadow-sm">
+                <div className="w-full max-w-[280px] h-[100px] flex items-center justify-center overflow-hidden rounded-xl shadow-sm">
                   <div className="p-0 w-full h-full flex items-center justify-center bg-transparent transition-colors">
                     <div className="relative w-full h-full flex items-center justify-center p-3">
                       <Image

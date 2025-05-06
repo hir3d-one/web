@@ -1,4 +1,4 @@
-import { capitalize } from '@repo/lib/format';
+import { capitalize } from '@/lib/format';
 import { getTableOfContents } from 'fumadocs-core/server';
 
 type SidebarProperties = {

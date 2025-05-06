@@ -1,6 +1,6 @@
 import { FeatureHero } from '@/components/feature-hero';
 import { features } from '@/lib/features';
-import { Container } from '@repo/design-system/components/container';
+import { Container } from '@/components/container';
 import type { HTMLAttributes } from 'react';
 import { Card } from '../card';
 import { WidgetGraphic } from './components/widget-graphic';

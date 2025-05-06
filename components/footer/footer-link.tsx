@@ -1,7 +1,7 @@
 'use client';
 
-import { Link } from '@repo/design-system/components/link';
-import { cn } from '@repo/design-system/lib/utils';
+import { Link } from '@/components/link';
+import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
 type FooterLinkProperties = {

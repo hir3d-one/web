@@ -1,7 +1,7 @@
 'use client';
 
 import VideoCall from '@/public/video.jpg';
-import { LoadingCircle } from '@repo/design-system/components/loading-circle';
+import { LoadingCircle } from '@/components/loading-circle';
 import { PlayCircleIcon } from 'lucide-react';
 import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import Image from 'next/image';

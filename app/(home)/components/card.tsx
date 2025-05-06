@@ -1,7 +1,7 @@
 'use client';
 
-import { Badge } from '@repo/design-system/components/ui/badge';
-import { cn } from '@repo/design-system/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 import type { ReactNode } from 'react';
 import Balancer from 'react-wrap-balancer';
 

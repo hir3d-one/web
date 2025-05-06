@@ -1,16 +1,16 @@
 import { env } from '@/env';
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Logo } from '@repo/design-system/components/logo';
-import { Button } from '@repo/design-system/components/ui/button';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Logo } from '@/components/logo';
+import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@repo/design-system/components/ui/navigation-menu';
-import { cn } from '@repo/design-system/lib/utils';
+} from '@/components/ui/navigation-menu';
+import { cn } from '@/lib/utils';
 import {
   ArrowRightIcon,
   BookIcon,

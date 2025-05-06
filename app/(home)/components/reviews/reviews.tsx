@@ -1,6 +1,6 @@
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Prose } from '@repo/design-system/components/prose';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 import { reviews } from '@repo/lib/reviews';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';

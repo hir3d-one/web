@@ -1,7 +1,7 @@
 import { Card } from '@/app/(home)/components/card';
 import { FeatureHero } from '@/components/feature-hero';
 import { features } from '@/lib/features';
-import { Container } from '@repo/design-system/components/container';
+import { Container } from '@/components/container';
 import type { HTMLAttributes } from 'react';
 import { ChangelogGraphic } from './components/changelog-graphic';
 import { GenerativeChangelogGraphic } from './components/generative-changelog-graphic';

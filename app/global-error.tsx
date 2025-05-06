@@ -1,7 +1,7 @@
 'use client';
 
-import { Prose } from '@repo/design-system/components/prose';
-import { Button } from '@repo/design-system/components/ui/button';
+import { Prose } from '@/components/prose';
+import { Button } from '@/components/ui/button';
 import * as Sentry from '@sentry/nextjs';
 import type Error from 'next/error';
 import { useEffect } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { LoadingCircle } from '@repo/design-system/components/loading-circle';
+import { LoadingCircle } from '@/components/loading-circle';
 import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef, useState } from 'react';

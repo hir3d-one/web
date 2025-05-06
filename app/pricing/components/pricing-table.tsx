@@ -1,10 +1,10 @@
 'use client';
 
-import { Link } from '@repo/design-system/components/link';
-import { Select } from '@repo/design-system/components/precomposed/select';
-import { Tooltip } from '@repo/design-system/components/precomposed/tooltip';
-import { Button } from '@repo/design-system/components/ui/button';
-import { cn } from '@repo/design-system/lib/utils';
+import { Link } from '@/components/link';
+import { Select } from '@/components/precomposed/select';
+import { Tooltip } from '@/components/precomposed/tooltip';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { CheckIcon, HelpCircleIcon } from 'lucide-react';
 import { useState } from 'react';
 

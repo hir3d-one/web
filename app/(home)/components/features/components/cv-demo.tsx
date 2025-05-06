@@ -2,9 +2,9 @@
 
 import type React from "react"
 import { useState, useCallback, useEffect, useMemo } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card"
-import { Button } from "@repo/design-system/components/ui/button"
-import { Badge } from "@repo/design-system/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import {
   Drawer,
   DrawerClose,
@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@repo/design-system/components/ui/drawer"
+} from "@/components/ui/drawer"
 import {
   Star,
   StarHalf,
@@ -35,7 +35,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@repo/design-system/components/ui/tooltip"
+} from "@/components/ui/tooltip"
 
 interface AIAnalysis {
   [key: string]: {

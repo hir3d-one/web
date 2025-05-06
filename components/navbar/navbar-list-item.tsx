@@ -1,5 +1,5 @@
-import { NavigationMenuLink } from '@repo/design-system/components/ui/navigation-menu';
-import { cn } from '@repo/design-system/lib/utils';
+import { NavigationMenuLink } from '@/components/ui/navigation-menu';
+import { cn } from '@/lib/utils';
 import { ExternalLinkIcon } from 'lucide-react';
 import type { PlusIcon } from 'lucide-react';
 import { forwardRef } from 'react';

@@ -1,10 +1,10 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Input } from '@repo/design-system/components/precomposed/input';
-import { Textarea } from '@repo/design-system/components/precomposed/textarea';
-import { Prose } from '@repo/design-system/components/prose';
-import { Button } from '@repo/design-system/components/ui/button';
+import { Input } from '@/components/precomposed/input';
+import { Textarea } from '@/components/precomposed/textarea';
+import { Prose } from '@/components/prose';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -13,8 +13,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@repo/design-system/components/ui/form';
-import { handleError } from '@repo/design-system/lib/handle-error';
+} from '@/components/ui/form';
+import { handleError } from '@/lib/handle-error';
 import { emailRegex } from '@repo/lib/email';
 import { Suspense } from 'react';
 import { useForm } from 'react-hook-form';

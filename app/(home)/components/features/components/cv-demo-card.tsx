@@ -1,8 +1,8 @@
 'use client';
 
-import { cn } from '@repo/design-system/lib/utils';
-import { Badge } from '@repo/design-system/components/ui/badge';
-import { Button } from '@repo/design-system/components/ui/button';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { useState, type ReactNode, useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { Star, StarHalf, Trophy, Target, Briefcase, GraduationCap, Info, User, Mail, FileText, Wrench, FolderGit2 } from 'lucide-react';

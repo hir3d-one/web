@@ -10,7 +10,7 @@ import {
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 
-import { cn } from '@repo/design-system/lib/utils';
+import { cn } from '@/lib/utils';
 
 const github = '/github.svg';
 const linear = '/linear.svg';

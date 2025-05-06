@@ -1,6 +1,6 @@
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Logo } from '@repo/design-system/components/logo';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Logo } from '@/components/logo';
 import { Status } from '@repo/observability/status';
 import { FooterLink } from './footer-link';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import * as Gantt from '@repo/design-system/components/roadmap-ui/gantt';
+import * as Gantt from '@/components/roadmap-ui/gantt';
 import { tailwind } from '@repo/tailwind-config';
 import { addDays, addMonths, subDays, subMonths } from 'date-fns';
 import Image from 'next/image';

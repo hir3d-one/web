@@ -1,7 +1,7 @@
 'use client';
 
-import { Container } from '@repo/design-system/components/container';
-import { cn } from '@repo/design-system/lib/utils';
+import { Container } from '@/components/container';
+import { cn } from '@/lib/utils';
 import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';

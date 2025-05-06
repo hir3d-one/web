@@ -1,8 +1,8 @@
 'use client';
 
 import type { Feature } from '@/lib/features';
-import { Container } from '@repo/design-system/components/container';
-import { Badge } from '@repo/design-system/components/ui/badge';
+import { Container } from '@/components/container';
+import { Badge } from '@/components/ui/badge';
 import { LazyMotion, domAnimation, m } from 'motion/react';
 import type { ReactNode } from 'react';
 import Balancer from 'react-wrap-balancer';

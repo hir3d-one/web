@@ -1,6 +1,6 @@
 'use client';
 
-import * as Calendar from '@repo/design-system/components/roadmap-ui/calendar';
+import * as Calendar from '@/components/roadmap-ui/calendar';
 import { tailwind } from '@repo/tailwind-config';
 import { addDays, addMonths, subDays, subMonths } from 'date-fns';
 

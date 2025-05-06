@@ -1,11 +1,11 @@
 'use client';
 
-import { Container } from '@repo/design-system/components/container';
-import { Link } from '@repo/design-system/components/link';
-import { Prose } from '@repo/design-system/components/prose';
-import { Badge } from '@repo/design-system/components/ui/badge';
-import { Button } from '@repo/design-system/components/ui/button';
-import { cn } from '@repo/design-system/lib/utils';
+import { Container } from '@/components/container';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { LazyMotion, domAnimation, m } from 'motion/react';
 import type { ComponentProps } from 'react';

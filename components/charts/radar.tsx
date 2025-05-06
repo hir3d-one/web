@@ -1,6 +1,6 @@
 'use client';
 
-import config from '@/tailwind.config';
+import colors from 'tailwindcss/colors';
 import type { ComponentProps } from 'react';
 import {
   PolarAngleAxis,
@@ -34,7 +34,7 @@ export const RadarChart = ({
       <PolarGrid />
       <Radar
         dataKey={dataKey}
-        fill={config.theme.colors.violet[500]}
+        fill={colors.violet[500]}
         fillOpacity={0.6}
       />
     </RadarChartComponent>

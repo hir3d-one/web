@@ -118,7 +118,7 @@ const Terms = () => (
     </p>
     <h2>Liability</h2>
     <p>
-      Our website and the materials on our website are provided on an 'as is'
+      Our website and the materials on our website are provided on an &apos;as is&apos;
       basis. To the extent permitted by law, Hir3d makes no warranties,
       expressed or implied, and hereby disclaims and negates all other
       warranties including, without limitation, implied warranties or conditions

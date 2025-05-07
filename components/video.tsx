@@ -87,7 +87,7 @@ export const Video = ({
         }}
         width={width ?? '100%'}
         height={height ?? '100%'}
-        onReady={(player) => {
+        onReady={(player: any) => {
           setLoaded(true);
           onReady?.(player);
         }}

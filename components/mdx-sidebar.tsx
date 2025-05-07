@@ -1,5 +1,6 @@
 import { capitalize } from '@/lib/format';
 import { getTableOfContents } from 'fumadocs-core/server';
+import type { TOCItemType } from 'fumadocs-core/server';
 
 type SidebarProperties = {
   readonly date: Date;
@@ -39,7 +40,7 @@ export const Sidebar = async ({
           <div className="grid gap-2 p-2">
             <p className="text-muted-foreground text-sm">Sections</p>
             <ul className="flex list-none flex-col gap-2 text-sm">
-              {toc.map((item) => (
+              {toc.map((item: TOCItemType) => (
                 <li
                   key={item.url}
                   style={{

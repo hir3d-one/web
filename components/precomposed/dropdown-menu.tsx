@@ -4,9 +4,9 @@ import * as DropdownMenuComponent from '../ui/dropdown-menu';
 export type DropdownMenuProperties = ComponentProps<
   typeof DropdownMenuComponent.DropdownMenu
 > & {
-  readonly data: ComponentProps<
+  readonly data: Array<ComponentProps<
     typeof DropdownMenuComponent.DropdownMenuItem
-  >[];
+  >>;
   readonly children: ReactNode;
   readonly label?: string;
 };
@@ -30,7 +30,7 @@ export const DropdownMenu = ({
           <DropdownMenuComponent.DropdownMenuSeparator />
         </>
       ) : null}
-      {data.map((item, index) => (
+      {data.map((item: ComponentProps<typeof DropdownMenuComponent.DropdownMenuItem>, index: number) => (
         <DropdownMenuComponent.DropdownMenuItem {...item} key={index} />
       ))}
     </DropdownMenuComponent.DropdownMenuContent>

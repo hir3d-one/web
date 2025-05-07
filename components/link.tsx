@@ -35,3 +35,5 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProperties>(
     );
   }
 );
+
+Link.displayName = 'Link';

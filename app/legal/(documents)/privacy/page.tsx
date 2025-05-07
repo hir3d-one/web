@@ -125,7 +125,7 @@ const Privacy = () => (
       manner that is incompatible with these purposes:
     </p>
     <ul>
-      <li>to provide you with our platform's core features and services</li>
+      <li>to provide you with our platform&apos;s core features and services</li>
       <li>
         for security and fraud prevention, and to ensure that our sites and apps
         are safe, secure, and used in line with our terms of use

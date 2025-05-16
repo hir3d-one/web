@@ -13,7 +13,7 @@ const codeString = `const payload = {
   },
 }
   
-const response = await fetch('https://app.eververse.ai/••••••••', {
+const response = await fetch('https://app.hir3d.one, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

@@ -230,27 +230,27 @@ const groups = [
       },
       {
         label: 'Jira',
-        description: 'Sync Eververse features to Jira tickets.',
+        description: 'Sync Hir3d features to Jira tickets.',
         plans: [true, true, true],
       },
       {
         label: 'GitHub',
-        description: 'Sync Eververse features to GitHub issues.',
+        description: 'Sync Hir3d features to GitHub issues.',
         plans: [true, true, true],
       },
       {
         label: 'Linear',
-        description: 'Sync Eververse features to Linear issues.',
+        description: 'Sync Hir3d features to Linear issues.',
         plans: [true, true, true],
       },
       {
         label: 'Intercom',
-        description: 'Create Eververse feedback from Intercom conversations.',
+        description: 'Create Hir3d feedback from Intercom conversations.',
         plans: [true, true, true],
       },
       {
         label: 'Slack',
-        description: 'Create Eververse feedback from Slack messages.',
+        description: 'Create Hir3d feedback from Slack messages.',
         plans: [true, true, true],
       },
       {
@@ -345,7 +345,7 @@ const groups = [
       },
       {
         label: 'Sync with Jira',
-        description: 'Sync Eververse Releases with Jira Fix Versions.',
+        description: 'Sync Hir3d Releases with Jira Fix Versions.',
         plans: [true, true, true],
       },
     ],
@@ -390,7 +390,7 @@ export const PricingTable = ({
       description: 'For getting started',
       price: 'Free forever',
       cta: 'Get started for free',
-      link: 'https://app.eververse.ai/',
+      link: 'https://app.hir3d.one',
       caption: 'No credit card required.',
     },
     {
@@ -398,7 +398,7 @@ export const PricingTable = ({
       description: 'For small teams',
       price: annualPrice,
       cta: 'Start your free trial',
-      link: 'https://app.eververse.ai/',
+      link: 'https://app.hir3d.one',
       caption: `Billed annually, or $${monthlyPrice} billed monthly.`,
     },
     {

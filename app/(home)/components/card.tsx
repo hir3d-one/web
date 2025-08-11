@@ -13,6 +13,7 @@ export const Card = ({
   wide,
   className,
   badge,
+  contentClassName,
 }: {
   readonly feature: string;
   readonly title: string;
@@ -21,6 +22,7 @@ export const Card = ({
   readonly wide?: boolean;
   readonly className?: string;
   readonly badge?: string;
+  readonly contentClassName?: string;
 }) => (
   <div
     className={cn(
@@ -43,7 +45,8 @@ export const Card = ({
       <div
         className={cn(
           'relative h-64 w-full overflow-hidden rounded-lg border bg-backdrop',
-          wide && 'sm:hidden'
+          wide && 'sm:hidden',
+          contentClassName
         )}
       >
         {children}
@@ -58,7 +61,8 @@ export const Card = ({
     <div
       className={cn(
         'relative col-span-2 hidden h-96 w-full overflow-hidden rounded-lg border',
-        wide && 'sm:block'
+        wide && 'sm:block',
+        contentClassName
       )}
     >
       <div className="relative flex h-full w-full">{children}</div>

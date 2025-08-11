@@ -12,7 +12,7 @@ type PortalProperties = HTMLAttributes<HTMLDivElement>;
 export const Portal = (properties: PortalProperties) => (
   <section {...properties}>
     <Container className="flex flex-col gap-8 border-x px-4 pt-16 pb-4">
-      <FeatureHero {...features.portal} />
+      <FeatureHero {...features.portal} formerly="" />
       <div className="grid gap-4 md:grid-cols-6">
         <Card
           className="h-full md:col-span-6"

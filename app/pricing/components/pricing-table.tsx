@@ -390,7 +390,7 @@ export const PricingTable = ({
       description: 'For getting started',
       price: 'Free forever',
       cta: 'Get started for free',
-      link: 'https://app.eververse.ai/',
+      link: 'https://prod-hir3d.vercel.app/',
       caption: 'No credit card required.',
     },
     {
@@ -398,7 +398,7 @@ export const PricingTable = ({
       description: 'For small teams',
       price: annualPrice,
       cta: 'Start your free trial',
-      link: 'https://app.eververse.ai/',
+      link: 'https://prod-hir3d.vercel.app/',
       caption: `Billed annually, or $${monthlyPrice} billed monthly.`,
     },
     {

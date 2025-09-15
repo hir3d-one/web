@@ -32,18 +32,20 @@ export const FeatureHeroInner = ({
           </Badge>
         </m.div>
         <div className="mt-8 mb-4">
-          <p className="m-0 mx-auto text-center font-semibold text-2xl tracking-tighter sm:text-3xl md:text-5xl">
-            <Balancer>
-              <m.span
-                className="text-muted-foreground line-through"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                {formerly}
-              </m.span>
-            </Balancer>
-          </p>
+          {formerly && (
+            <p className="m-0 mx-auto text-center font-semibold text-2xl tracking-tighter sm:text-3xl md:text-5xl">
+              <Balancer>
+                <m.span
+                  className="text-muted-foreground line-through"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  {formerly}
+                </m.span>
+              </Balancer>
+            </p>
+          )}
           <h1 className="m-0 mx-auto text-center font-semibold text-2xl tracking-tighter sm:text-3xl md:text-5xl">
             <Balancer>
               <m.span

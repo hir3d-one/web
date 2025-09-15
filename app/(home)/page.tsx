@@ -6,7 +6,6 @@ import { Activity } from './components/activity';
 import { Changelog } from './components/changelog';
 import { Customers } from './components/customers';
 import { Features } from './components/features';
-import { Feedback } from './components/feedback';
 import { Hero } from './components/hero';
 import { Initiatives } from './components/initiatives';
 import { Integrations } from './components/integrations';
@@ -31,16 +30,8 @@ const Home = async (): Promise<ReactElement> => {
     <>
       <Hero id="hero" latestUpdate={latestUpdate?.title} />
       <Customers id="customers" count={organization} />
-      <Feedback id="feedback" />
       <Features id="features" />
-      <Initiatives id="initiatives" />
-      <Roadmap id="roadmap" />
-      <Activity id="activity" />
-      <Changelog id="changelog" />
       <Portal id="portal" />
-      <Widget id="widget" />
-      <Releases id="releases" />
-      <Integrations id="integrations" />
       <Reviews id="reviews" />
     </>
   );

@@ -73,9 +73,9 @@ export const features: Record<string, Feature> = {
     icon: ZapIcon,
     name: 'Portal',
     href: '/portal',
-    description: 'Create a public roadmap and changelog.',
-    formerly: 'Send monthly email updates to your users.',
-    short: 'Your public roadmap.',
+    description: 'Create a public job board and candidate portal.',
+    formerly: 'Send individual job postings across multiple platforms.',
+    short: 'Your public job board.',
   },
   widget: {
     icon: BlocksIcon,

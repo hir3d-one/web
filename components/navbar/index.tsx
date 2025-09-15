@@ -32,21 +32,6 @@ const links = [
     label: 'Contact',
     icon: MessageSquareIcon,
   },
-  {
-    href: process.env.HIR3D_DOCS_URL || 'https://docs.example.com',
-    label: 'Docs',
-    icon: BookIcon,
-  },
-  {
-    href: 'https://hir3d.hir3d.one',
-    label: 'Roadmap',
-    icon: CalendarIcon,
-  },
-  {
-    href: 'https://github.com/daniensi/hir3d',
-    label: 'Source Code',
-    icon: CodeIcon,
-  },
 ];
 
 export const Navbar = () => (
@@ -87,7 +72,7 @@ export const Navbar = () => (
         </div>
         <div className="flex justify-end">
           <Button asChild className="hidden md:flex">
-            <a href=" https://prod-hir3d.vercel.app">Get started</a>
+            <a href=" https://prod-hir3d.vercel.app">Dashboard</a>
           </Button>
           <Button asChild size="icon" className="flex md:hidden">
             <a href=" https://prod-hir3d.vercel.app">

@@ -6,6 +6,7 @@ import type { HTMLAttributes } from 'react';
 import { EditorGraphic } from './components/editor-graphic';
 import { FeatureStatusGraphic } from './components/feature-status-graphic';
 import { RiceGraphic } from './components/rice-graphic';
+import { RankingGraphic } from './components/ranking-graphic';
 import { WritingGraphic } from './components/writing-graphic';
 import { CVDemoCard } from './components/cv-demo-card';
 import { CVDemoGraphic } from './components/cv-demo-graphic';
@@ -15,7 +16,7 @@ type FeaturesProperties = HTMLAttributes<HTMLDivElement>;
 export const Features = (properties: FeaturesProperties) => (
   <section {...properties}>
     <Container className="flex flex-col gap-8 border-x px-4 pt-16 pb-4">
-      <FeatureHero {...features.features} />
+      <FeatureHero {...features.features} formerly="" />
       <div className="grid gap-4 md:grid-cols-6">
         {/*<Card
           className="h-full md:col-span-3"
@@ -45,12 +46,13 @@ export const Features = (properties: FeaturesProperties) => (
         </CVDemoCard>
         
         <Card
-          className="h-full md:col-span-3"
-          feature="Predictive AI Prioritization"
-          title="AI RICE scoring"
-          description="Hir3d will automatically best-guess Reach, Impact, Confidence, Effort to help you prioritize your backlog."
+          className="h-full md:col-span-6"
+          feature="Contextual Ranking System"
+          title="Contextual CV Ranking"
+          description="Automatically ranks candidate CVs for employers based on job fit, surfacing the best‑suited applicants first."
+          contentClassName="h-[260px] sm:h-[300px] md:h-[340px]"
         >
-          <RiceGraphic />
+          <RankingGraphic />
         </Card>
         {/*<Card
           className="h-full md:col-span-3"

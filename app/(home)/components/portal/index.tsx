@@ -17,8 +17,8 @@ export const Portal = (properties: PortalProperties) => (
         <Card
           className="h-full md:col-span-6"
           feature="Portal"
-          title="Share your plans, ask for Feedback"
-          description="Share your product roadmap and let your users vote on features they want to see."
+          title="Share job openings, attract top talent"
+          description="Create a public job board where candidates can browse positions and apply directly to your organization."
         >
           <div className="not-prose group flex h-full w-full items-center justify-center">
             <Image
@@ -29,7 +29,7 @@ export const Portal = (properties: PortalProperties) => (
               height={1282}
             />
             <Button variant="secondary" asChild className="relative z-10">
-              <Link href="https://hir3d.hir3d.one/">See the Hir3d Portal</Link>
+              <Link href="https://hir3d.hir3d.one/">See the Hir3d Job Portal</Link>
             </Button>
           </div>
         </Card>

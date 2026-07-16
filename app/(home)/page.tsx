@@ -16,9 +16,9 @@ import { Roadmap } from './components/roadmap';
 import { Widget } from './components/widget';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Build your product roadmap at lightspeed',
+  title: 'AI-powered recruiting and candidate discovery',
   description:
-    'Hir3d is a home for product teams to explore problems, ideate solutions, prioritize features and plan roadmaps with the help of AI.',
+    'Hir3d helps recruiting teams analyze resumes, discover candidates, and streamline hiring workflows with AI.',
 });
 
 const Home = async (): Promise<ReactElement> => {

@@ -29,7 +29,7 @@ export const Portal = (properties: PortalProperties) => (
               height={1282}
             />
             <Button variant="secondary" asChild className="relative z-10">
-              <Link href="https://hir3d.hir3d.one/">See the Hir3d Job Portal</Link>
+              <Link href="https://hir3d-app.vercel.app/">See the Hir3d Job Portal</Link>
             </Button>
           </div>
         </Card>

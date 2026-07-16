@@ -4,7 +4,12 @@ import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { DesignSystemProvider } from '@/components/provider';
 import { fonts } from '@/lib/fonts';
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://hir3d-web.vercel.app'),
+};
 
 type RootLayoutProperties = {
   readonly children: ReactNode;

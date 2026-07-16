@@ -8,8 +8,7 @@ import { FeatureStatusGraphic } from './components/feature-status-graphic';
 import { RiceGraphic } from './components/rice-graphic';
 import { RankingGraphic } from './components/ranking-graphic';
 import { WritingGraphic } from './components/writing-graphic';
-import { CVDemoCard } from './components/cv-demo-card';
-import { CVDemoGraphic } from './components/cv-demo-graphic';
+import { CandidateShowcase } from './components/candidate-showcase';
 
 type FeaturesProperties = HTMLAttributes<HTMLDivElement>;
 
@@ -34,17 +33,11 @@ export const Features = (properties: FeaturesProperties) => (
         >
           <WritingGraphic />
         </Card>*/}
-        
-        {/* CV Analysis Demo Card - Takes full width */}
-        <CVDemoCard
-          className="h-full md:col-span-6"
-          feature="AI CV Analysis"
-          title="Get instant insights from candidate resumes"
-          description="Hir3d's AI analyzes candidate resumes to extract key skills, experience, and generates tailored recommendations to help you make better hiring decisions quickly."
-        >
-          <CVDemoGraphic />
-        </CVDemoCard>
-        
+
+        <div className="h-full md:col-span-6">
+          <CandidateShowcase />
+        </div>
+
         <Card
           className="h-full md:col-span-6"
           feature="Contextual Ranking System"

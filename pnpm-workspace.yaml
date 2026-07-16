@@ -1,0 +1,10 @@
+packages:
+  - "."
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+overrides:
+  postcss: 8.5.19
+  prismjs: 1.30.0
+minimumReleaseAgeExclude:
+  - fumadocs-core@16.11.5

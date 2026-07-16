@@ -1,4 +1,4 @@
-export const baseUrl = 'https://hir3d.one';
+export const baseUrl = 'https://hir3d-web.vercel.app';
 
 export const MAX_FREE_CHANGELOGS = 10;
 export const MAX_FREE_FEATURES = 10;

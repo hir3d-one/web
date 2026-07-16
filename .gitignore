@@ -46,3 +46,5 @@ next-env.d.ts
 
 # tiptap
 .npmrc
+.env*
+!.env.example

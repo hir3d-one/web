@@ -35,7 +35,7 @@ export const Hero = ({
               >
                 <a
                   aria-label="View latest update on Hir3d changelog page"
-                  href="https://hir3d.hir3d.one/changelog"
+                  href="https://hir3d-app.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

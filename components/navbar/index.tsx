@@ -72,10 +72,10 @@ export const Navbar = () => (
         </div>
         <div className="flex justify-end">
           <Button asChild className="hidden md:flex">
-            <a href=" https://prod-hir3d.vercel.app">Dashboard</a>
+            <a href="https://hir3d-app.vercel.app">Dashboard</a>
           </Button>
           <Button asChild size="icon" className="flex md:hidden">
-            <a href=" https://prod-hir3d.vercel.app">
+            <a href="https://hir3d-app.vercel.app">
               <ArrowRightIcon size={16} />
             </a>
           </Button>

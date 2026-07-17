@@ -1,13 +1,14 @@
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 
 const title = 'Acceptable Use Policy';
 const description =
   'This acceptable use policy covers the products, services, and technologies (collectively referred to as the “Products”) provided by Hir3d under any ongoing agreement.';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title,
   description,
-};
+});
 
 const Privacy = () => (
   <>

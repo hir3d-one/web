@@ -25,7 +25,7 @@ const links = [
 ];
 
 const headerNavButtonClassName = 'w-10 px-0 md:w-24 md:px-4';
-const headerActionButtonClassName = 'w-9 px-0 sm:w-28 sm:px-4';
+const headerActionButtonClassName = 'w-9 px-0 sm:w-36 sm:px-4';
 
 export const Navbar = () => (
   <LazyMotion features={domAnimation}>

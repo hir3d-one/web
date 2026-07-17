@@ -1,4 +1,3 @@
-// import { env } from '@/env';
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
@@ -10,6 +9,8 @@ import {
   MessageSquareIcon,
 } from 'lucide-react';
 import { LazyMotion, domAnimation } from 'motion/react';
+
+const APP_URL = 'https://hir3d-app.vercel.app';
 
 const links = [
   {
@@ -57,7 +58,7 @@ export const Navbar = () => (
         </nav>
         <div className="flex items-center justify-end gap-1">
           <Button className={headerActionButtonClassName} asChild>
-            <a href="https://hir3d-app.vercel.app">
+            <a href={APP_URL}>
               <span className="hidden sm:inline">Dashboard</span>
               <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only sm:hidden">Dashboard</span>

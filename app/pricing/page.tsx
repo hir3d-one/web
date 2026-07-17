@@ -1,6 +1,7 @@
 import Climate from '@/components/climate';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import { PricingTable } from './components/pricing-table';
 
@@ -8,10 +9,10 @@ const title = 'Simple, transparent pricing';
 const description =
   'No hidden fees. No surprises. 15-day trial. Cancel anytime.';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title,
   description,
-};
+});
 
 const Pricing = () => {
   // Static prices instead of fetching from Stripe

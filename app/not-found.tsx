@@ -2,11 +2,13 @@ import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
 import { Button } from '@/components/ui/button';
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: '404 — Page Not Found',
-};
+  description: "The Hir3d page you're looking for could not be found.",
+});
 
 const NotFound = () => (
   <Container className="border-x p-16">

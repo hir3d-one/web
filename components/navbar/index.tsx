@@ -1,25 +1,16 @@
-// import { env } from '@/env';
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { cn } from '@/lib/utils';
-import {
   ArrowRightIcon,
-  BookIcon,
-  CalendarIcon,
-  CodeIcon,
   CreditCardIcon,
   MessageSquareIcon,
 } from 'lucide-react';
 import { LazyMotion, domAnimation } from 'motion/react';
+
+const APP_URL = 'https://hir3d-app.vercel.app';
 
 const links = [
   {
@@ -34,10 +25,13 @@ const links = [
   },
 ];
 
+const headerNavButtonClassName = 'w-10 px-0 md:w-24 md:px-4';
+const headerActionButtonClassName = 'w-9 px-0 sm:w-36 sm:px-4';
+
 export const Navbar = () => (
   <LazyMotion features={domAnimation}>
-    <nav className="sticky top-0 z-50 border-b">
-      <Container className="grid grid-cols-[40px_1fr_40px] items-center gap-4 border-x bg-backdrop/90 py-3 backdrop-blur-sm md:grid-cols-[120px_1fr_120px]">
+    <header className="public-navbar sticky top-0 z-50 border-b bg-backdrop/90 backdrop-blur-sm">
+      <Container className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 border-x py-3">
         <div>
           <Link href="/" className="hidden md:block">
             <Logo showName />
@@ -46,41 +40,33 @@ export const Navbar = () => (
             <Logo />
           </Link>
         </div>
-        <div className="flex items-center justify-center">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {links.map((link) => (
-                <NavigationMenuItem key={link.href}>
-                  <NavigationMenuLink
-                    asChild
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      '!bg-transparent text-muted-foreground hover:text-foreground'
-                    )}
-                  >
-                    <Link href={link.href}>
-                      <span className="hidden md:block">{link.label}</span>
-                      <span className="block md:hidden">
-                        <link.icon size={16} />
-                      </span>
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-        <div className="flex justify-end">
-          <Button asChild className="hidden md:flex">
-            <a href="https://hir3d-app.vercel.app">Dashboard</a>
-          </Button>
-          <Button asChild size="icon" className="flex md:hidden">
-            <a href="https://hir3d-app.vercel.app">
-              <ArrowRightIcon size={16} />
+        <nav aria-label="Main" className="flex items-center justify-center">
+          {links.map(({ href, label, icon: Icon }) => (
+            <Button
+              key={href}
+              variant="ghost"
+              className={headerNavButtonClassName}
+              asChild
+            >
+              <Link href={href}>
+                <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
+                <span className="hidden md:inline">{label}</span>
+                <span className="sr-only md:hidden">{label}</span>
+              </Link>
+            </Button>
+          ))}
+        </nav>
+        <div className="flex items-center justify-end gap-1">
+          <Button className={headerActionButtonClassName} asChild>
+            <a href={APP_URL}>
+              <span className="hidden sm:inline">Dashboard</span>
+              <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only sm:hidden">Dashboard</span>
             </a>
           </Button>
+          <ThemeToggle />
         </div>
       </Container>
-    </nav>
+    </header>
   </LazyMotion>
 );

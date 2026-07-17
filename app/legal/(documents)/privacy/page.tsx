@@ -1,3 +1,4 @@
+import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -5,10 +6,10 @@ const title = 'Privacy Policy';
 const description =
   "Your privacy is important to us. It is Hir3d's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website and other sites we own and operate.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title,
   description,
-};
+});
 
 const Privacy = () => (
   <>

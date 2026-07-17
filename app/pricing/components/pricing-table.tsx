@@ -15,6 +15,7 @@ import {
   MAX_FREE_MEMBERS,
   MAX_FREE_RELEASES,
 } from '@/lib/consts';
+import { sites } from '@/lib/sites';
 import { CheckIcon, HelpCircleIcon } from 'lucide-react';
 import { useState } from 'react';
 
@@ -390,7 +391,7 @@ export const PricingTable = ({
       description: 'For getting started',
       price: 'Free forever',
       cta: 'Get started for free',
-      link: 'https://hir3d-app.vercel.app/',
+      link: `${sites.app}/`,
       caption: 'No credit card required.',
     },
     {
@@ -398,7 +399,7 @@ export const PricingTable = ({
       description: 'For small teams',
       price: annualPrice,
       cta: 'Start your free trial',
-      link: 'https://hir3d-app.vercel.app/',
+      link: `${sites.app}/`,
       caption: `Billed annually, or $${monthlyPrice} billed monthly.`,
     },
     {

@@ -4,6 +4,7 @@ import { features } from '@/lib/features';
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Button } from '@/components/ui/button';
+import { sites } from '@/lib/sites';
 import Image from 'next/image';
 import type { HTMLAttributes } from 'react';
 
@@ -29,7 +30,7 @@ export const Portal = (properties: PortalProperties) => (
               height={1282}
             />
             <Button variant="secondary" asChild className="relative z-10">
-              <Link href="https://hir3d-app.vercel.app/">See the Hir3d Job Portal</Link>
+              <Link href={`${sites.app}/`}>See the Hir3d Job Portal</Link>
             </Button>
           </div>
         </Card>

@@ -6,6 +6,7 @@ import { Prose } from '@/components/prose';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { sites } from '@/lib/sites';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { LazyMotion, domAnimation, m } from 'motion/react';
 import type { ComponentProps } from 'react';
@@ -35,7 +36,7 @@ export const Hero = ({
               >
                 <a
                   aria-label="View latest update on Hir3d changelog page"
-                  href="https://hir3d-app.vercel.app/"
+                  href={`${sites.app}/`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { sites } from '@/lib/sites';
 import {
   ArrowUpRightIcon,
   CheckIcon,
@@ -262,7 +263,7 @@ export const CandidateShowcase = () => {
               </p>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" asChild>
-                  <a href="https://prod-hir3d.vercel.app">
+                  <a href={sites.app}>
                     View profile
                     <ArrowUpRightIcon />
                   </a>

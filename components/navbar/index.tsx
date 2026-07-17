@@ -3,29 +3,44 @@ import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { sites } from '@/lib/sites';
 import {
   ArrowRightIcon,
+  Building2Icon,
   CreditCardIcon,
   MessageSquareIcon,
+  UploadCloudIcon,
 } from 'lucide-react';
 import { LazyMotion, domAnimation } from 'motion/react';
 
-const APP_URL = 'https://hir3d-app.vercel.app';
-
 const links = [
+  {
+    href: '/',
+    label: 'Company',
+    icon: Building2Icon,
+    external: false,
+  },
+  {
+    href: `${sites.upload}/upload?ref=nav`,
+    label: 'Upload',
+    icon: UploadCloudIcon,
+    external: true,
+  },
   {
     href: '/pricing',
     label: 'Pricing',
     icon: CreditCardIcon,
+    external: false,
   },
   {
     href: '/contact',
     label: 'Contact',
     icon: MessageSquareIcon,
+    external: false,
   },
 ];
 
-const headerNavButtonClassName = 'w-10 px-0 md:w-24 md:px-4';
+const headerNavButtonClassName = 'w-10 px-0 md:w-20 md:px-4';
 const headerActionButtonClassName = 'w-9 px-0 sm:w-36 sm:px-4';
 
 export const Navbar = () => (
@@ -41,24 +56,32 @@ export const Navbar = () => (
           </Link>
         </div>
         <nav aria-label="Main" className="flex items-center justify-center">
-          {links.map(({ href, label, icon: Icon }) => (
+          {links.map(({ href, label, icon: Icon, external }) => (
             <Button
-              key={href}
+              key={label}
               variant="ghost"
               className={headerNavButtonClassName}
               asChild
             >
-              <Link href={href}>
-                <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
-                <span className="hidden md:inline">{label}</span>
-                <span className="sr-only md:hidden">{label}</span>
-              </Link>
+              {external ? (
+                <a href={href}>
+                  <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
+                  <span className="hidden md:inline">{label}</span>
+                  <span className="sr-only md:hidden">{label}</span>
+                </a>
+              ) : (
+                <Link href={href}>
+                  <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
+                  <span className="hidden md:inline">{label}</span>
+                  <span className="sr-only md:hidden">{label}</span>
+                </Link>
+              )}
             </Button>
           ))}
         </nav>
         <div className="flex items-center justify-end gap-1">
           <Button className={headerActionButtonClassName} asChild>
-            <a href={APP_URL}>
+            <a href={sites.app}>
               <span className="hidden sm:inline">Dashboard</span>
               <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only sm:hidden">Dashboard</span>

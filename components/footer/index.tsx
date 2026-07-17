@@ -1,6 +1,7 @@
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
+import { sites } from '@/lib/sites';
 import { FooterLink } from './footer-link';
 
 const links = [
@@ -9,12 +10,20 @@ const links = [
     href: '/',
   },
   {
+    name: 'Upload',
+    href: `${sites.upload}/upload?ref=nav`,
+  },
+  {
     name: 'Pricing',
     href: '/pricing',
   },
   {
     name: 'Contact',
     href: '/contact',
+  },
+  {
+    name: 'Recruiter portal',
+    href: sites.app,
   },
   {
     name: 'Legal',

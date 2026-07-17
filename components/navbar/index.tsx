@@ -24,6 +24,9 @@ const links = [
   },
 ];
 
+const headerNavButtonClassName = 'w-10 px-0 md:w-24 md:px-4';
+const headerActionButtonClassName = 'w-9 px-0 sm:w-28 sm:px-4';
+
 export const Navbar = () => (
   <LazyMotion features={domAnimation}>
     <header className="public-navbar sticky top-0 z-50 border-b bg-backdrop/90 backdrop-blur-sm">
@@ -38,7 +41,12 @@ export const Navbar = () => (
         </div>
         <nav aria-label="Main" className="flex items-center justify-center">
           {links.map(({ href, label, icon: Icon }) => (
-            <Button key={href} variant="ghost" asChild>
+            <Button
+              key={href}
+              variant="ghost"
+              className={headerNavButtonClassName}
+              asChild
+            >
               <Link href={href}>
                 <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
                 <span className="hidden md:inline">{label}</span>
@@ -48,7 +56,7 @@ export const Navbar = () => (
           ))}
         </nav>
         <div className="flex items-center justify-end gap-1">
-          <Button asChild>
+          <Button className={headerActionButtonClassName} asChild>
             <a href="https://hir3d-app.vercel.app">
               <span className="hidden sm:inline">Dashboard</span>
               <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />

@@ -47,7 +47,7 @@ const headerActionButtonClassName =
 
 export const Navbar = () => (
   <LazyMotion features={domAnimation}>
-    <header className="public-navbar sticky top-0 z-50 border-b bg-backdrop/90 backdrop-blur-sm">
+    <header className="public-navbar border-b bg-backdrop/90 backdrop-blur-sm">
       <Container className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 border-x py-3">
         <div>
           <Link href="/" className="hidden md:block">

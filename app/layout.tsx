@@ -1,5 +1,6 @@
 import './globals.css';
 import { CallToAction } from '@/components/cta';
+import { DeprecationBanner } from '@/components/deprecation-banner';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { DesignSystemProvider } from '@/components/provider';
@@ -28,7 +29,10 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
     </head>
     <body className="min-h-screen bg-backdrop">
       <DesignSystemProvider>
-        <Navbar />
+        <div className="sticky top-0 z-50">
+          <DeprecationBanner />
+          <Navbar />
+        </div>
         <main className="divide-y">
           {children}
           <CallToAction />

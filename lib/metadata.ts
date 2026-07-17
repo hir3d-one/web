@@ -1,84 +1,94 @@
 import type { Metadata } from 'next';
-import { merge } from 'lodash';
 
-type MetadataGenerator = Omit<Metadata, 'description' | 'title'> & {
+type MetadataGenerator = {
   title: string;
   description: string;
   image?: string;
 };
 
 const applicationName = 'Hir3d';
-const author: Metadata['authors'] = {
-  name: 'Daniel Ensminger',
-  url: 'https://daniensi.com/',
-};
-const publisher = 'Daniel Ensminger';
-const twitterHandle = '@daniensi';
+const productionUrl =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? 'hir3d-web.vercel.app';
+const protocol = productionUrl.includes('localhost') ? 'http' : 'https';
 
-const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const protocol = productionUrl?.includes('localhost') ? 'http' : 'https';
-const baseUrl = new URL(`${protocol}://${productionUrl}`);
+export const siteUrl = new URL(`${protocol}://${productionUrl}`);
+
+export const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: applicationName,
+  url: siteUrl.toString(),
+  logo: new URL('/favicon.ico', siteUrl).toString(),
+  sameAs: ['https://github.com/hir3d-one', 'https://x.com/dani_duese'],
+};
 
 export const createMetadata = ({
   title,
   description,
-  image,
-  ...properties
+  image = '/opengraph-image.png',
 }: MetadataGenerator): Metadata => {
-  const parsedTitle = `${title} | ${applicationName}`;
-  const defaultMetadata: Metadata = {
-    title: parsedTitle,
+  const brandedTitle = `${applicationName} · ${title}`;
+  const socialImage = new URL(image, siteUrl).toString();
+
+  return {
+    title: brandedTitle,
     description,
     applicationName,
-    authors: [author],
-    creator: author.name,
+    authors: [{ name: applicationName, url: siteUrl.toString() }],
+    creator: applicationName,
+    metadataBase: siteUrl,
+    icons: {
+      icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    },
+    keywords: [
+      'AI recruiting',
+      'candidate discovery',
+      'resume analysis',
+      'talent sourcing',
+      'hiring software',
+    ],
     formatDetection: {
       telephone: false,
     },
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
-      title: parsedTitle,
+      title: applicationName,
     },
     openGraph: {
-      title: parsedTitle,
-      description,
       type: 'website',
       siteName: applicationName,
       locale: 'en_US',
-
-      // Patch for OG images not working due to route group?
+      url: siteUrl.toString(),
+      title: brandedTitle,
+      description,
       images: [
         {
-          url: new URL('/opengraph-image.png', baseUrl).toString(),
+          url: socialImage,
           width: 1200,
           height: 630,
           alt: title,
         },
       ],
     },
-    publisher,
+    publisher: applicationName,
     twitter: {
       card: 'summary_large_image',
-      creator: twitterHandle,
+      creator: '@dani_duese',
+      title: brandedTitle,
+      description,
+      images: [socialImage],
     },
-    other: {
-      'slack-app-id': 'A06NDDYKYE8',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
-
-  const metadata: Metadata = merge(defaultMetadata, properties);
-
-  if (image && metadata.openGraph) {
-    metadata.openGraph.images = [
-      {
-        url: image,
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ];
-  }
-
-  return metadata;
 };

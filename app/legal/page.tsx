@@ -1,5 +1,6 @@
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
+import { createMetadata } from '@/lib/metadata';
 import { ArrowRightIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -7,10 +8,10 @@ import Link from 'next/link';
 const title = 'Legal';
 const description = 'Legal information for Hir3d.';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title,
   description,
-};
+});
 
 const links = [
   {

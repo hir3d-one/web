@@ -4,18 +4,7 @@ import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { cn } from '@/lib/utils';
-import {
   ArrowRightIcon,
-  BookIcon,
-  CalendarIcon,
-  CodeIcon,
   CreditCardIcon,
   MessageSquareIcon,
 } from 'lucide-react';
@@ -46,30 +35,17 @@ export const Navbar = () => (
             <Logo />
           </Link>
         </div>
-        <div className="flex items-center justify-center">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {links.map((link) => (
-                <NavigationMenuItem key={link.href}>
-                  <NavigationMenuLink
-                    asChild
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      '!bg-transparent text-muted-foreground hover:text-foreground'
-                    )}
-                  >
-                    <Link href={link.href}>
-                      <span className="hidden md:block">{link.label}</span>
-                      <span className="block md:hidden">
-                        <link.icon size={16} />
-                      </span>
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
+        <nav aria-label="Main" className="flex items-center justify-center">
+          {links.map(({ href, label, icon: Icon }) => (
+            <Button key={href} variant="ghost" asChild>
+              <Link href={href}>
+                <Icon className="h-4 w-4 md:hidden" aria-hidden="true" />
+                <span className="hidden md:inline">{label}</span>
+                <span className="sr-only md:hidden">{label}</span>
+              </Link>
+            </Button>
+          ))}
+        </nav>
         <div className="flex justify-end">
           <Button asChild className="hidden md:flex">
             <a href="https://hir3d-app.vercel.app">Dashboard</a>

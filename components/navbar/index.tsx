@@ -2,6 +2,7 @@
 import { Container } from '@/components/container';
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import {
   ArrowRightIcon,
@@ -25,8 +26,8 @@ const links = [
 
 export const Navbar = () => (
   <LazyMotion features={domAnimation}>
-    <nav className="sticky top-0 z-50 border-b">
-      <Container className="grid grid-cols-[40px_1fr_40px] items-center gap-4 border-x bg-backdrop/90 py-3 backdrop-blur-sm md:grid-cols-[120px_1fr_120px]">
+    <header className="public-navbar sticky top-0 z-50 border-b bg-backdrop/90 backdrop-blur-sm">
+      <Container className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 border-x py-3">
         <div>
           <Link href="/" className="hidden md:block">
             <Logo showName />
@@ -46,17 +47,17 @@ export const Navbar = () => (
             </Button>
           ))}
         </nav>
-        <div className="flex justify-end">
-          <Button asChild className="hidden md:flex">
-            <a href="https://hir3d-app.vercel.app">Dashboard</a>
-          </Button>
-          <Button asChild size="icon" className="flex md:hidden">
+        <div className="flex items-center justify-end gap-1">
+          <Button asChild>
             <a href="https://hir3d-app.vercel.app">
-              <ArrowRightIcon size={16} />
+              <span className="hidden sm:inline">Dashboard</span>
+              <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only sm:hidden">Dashboard</span>
             </a>
           </Button>
+          <ThemeToggle />
         </div>
       </Container>
-    </nav>
+    </header>
   </LazyMotion>
 );

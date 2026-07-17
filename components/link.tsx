@@ -7,6 +7,7 @@ type LinkProperties = {
   readonly children: ComponentProps<'a'>['children'];
   readonly className?: string;
   readonly external?: boolean;
+  readonly 'aria-label'?: string;
 };
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProperties>(

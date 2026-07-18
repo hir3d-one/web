@@ -6,6 +6,7 @@ import { Navbar } from '@/components/navbar';
 import { DesignSystemProvider } from '@/components/provider';
 import { fonts } from '@/lib/fonts';
 import { createMetadata, organizationJsonLd } from '@/lib/metadata';
+import { OpenPanelComponent } from '@openpanel/nextjs';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
@@ -28,6 +29,14 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
       />
     </head>
     <body className="min-h-screen bg-backdrop">
+      {process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID ? (
+        <OpenPanelComponent
+          clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID}
+          trackScreenViews
+          trackOutgoingLinks
+          trackAttributes
+        />
+      ) : null}
       <DesignSystemProvider>
         <div className="sticky top-0 z-50">
           <DeprecationBanner />

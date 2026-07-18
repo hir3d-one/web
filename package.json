@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@hir3d/web",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3002",

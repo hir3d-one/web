@@ -1,9 +1,10 @@
 import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const title = 'Terms of Service';
 const description =
-  'These Terms of Service govern your use of the website and any related services provided by Hir3d. By accessing any of the sites mentioned above, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations.';
+  'Terms governing use of the Hir3d portfolio showcase websites and related demo apps.';
 
 export const metadata: Metadata = createMetadata({
   title,
@@ -16,182 +17,88 @@ const Terms = () => (
     <p>{description}</p>
     <hr />
     <p>
-      If you do not agree with these Terms of Service, you are prohibited from
-      using or accessing this website or using any other services provided by
-      Hir3d.
+      Hir3d is a retired AI recruiting product. The websites and apps linked from
+      this site (including the marketing site, recruiter app, and upload portal)
+      are provided as a <strong>deprecated portfolio showcase</strong>, not as
+      an active commercial SaaS offering. By accessing these sites, you agree to
+      these Terms.
     </p>
     <p>
-      We, Hir3d, reserve the right to review and amend any of these Terms of
-      Service at our sole discretion. Upon doing so, we will update this page.
-      Any changes to these Terms of Service will take effect immediately from
-      the date of publication.
+      If you do not agree, do not use the showcase. We may update these Terms by
+      posting a revised version on this page; changes take effect when published.
     </p>
-    <h2>Promotion</h2>
+    <h2>Nature of the service</h2>
     <p>
-      By using our services, you grant us the right to use your company logo and
-      name for promotional purposes, including but not limited to our website,
-      marketing materials, and social media channels. If you prefer not to have
-      your logo used in this manner, please contact us to opt out.
+      Features, pricing, trials, and billing described on this site are historical
+      or illustrative. Accounts, subscriptions, and paid plans are not offered.
+      Demo environments may be reset, limited, or unavailable without notice.
     </p>
-    <h2>Limitations of Use</h2>
-    <p>
-      By using this website, you warrant on behalf of yourself, your users, and
-      other parties you represent that you will not:
-    </p>
+    <h2>Limitations of use</h2>
+    <p>You agree not to:</p>
     <ol>
       <li>
-        modify, copy, prepare derivative works of, decompile, or reverse
-        engineer any materials and software contained on this website;
+        reverse engineer, scrape at abusive scale, or disrupt the showcase or its
+        infrastructure;
       </li>
       <li>
-        remove any copyright or other proprietary notations from any materials
-        and software on this website;
+        use the showcase to transmit unlawful, harassing, or fraudulent content;
       </li>
       <li>
-        transfer the materials to another person or “mirror” the materials on
-        any other server;
+        misrepresent affiliation with Hir3d or use the brand to sell unrelated
+        services;
       </li>
       <li>
-        knowingly or negligently use this website or any of its associated
-        services in a way that abuses or disrupts our networks or any other
-        service Hir3d provides;
-      </li>
-      <li>
-        use this website or its associated services to transmit or publish any
-        harassing, indecent, obscene, fraudulent, or unlawful material;
-      </li>
-      <li>
-        use this website or its associated services in violation of any
-        applicable laws or regulations;
-      </li>
-      <li>
-        use this website in conjunction with sending unauthorized advertising or
-        spam;
-      </li>
-      <li>
-        harvest, collect, or gather user data without the user’s consent; or
-      </li>
-      <li>
-        use this website or its associated services in such a way that may
-        infringe the privacy, intellectual property rights, or other rights of
-        third parties.
+        upload sensitive personal data you are not authorized to process (for
+        example, real candidate CVs containing third-party personal data) into
+        any demo environment.
       </li>
     </ol>
-    <h2>Intellectual Property</h2>
+    <h2>Intellectual property</h2>
     <p>
-      The intellectual property in the materials contained in this website are
-      owned by or licensed to Hir3d and are protected by applicable copyright
-      and trademark law. We grant our users permission to download one copy of
-      the materials for personal, non-commercial transitory use.
+      Materials on these sites are owned by or licensed to Hir3d and protected by
+      applicable intellectual property law, except where open-source licenses
+      apply (see the repositories under{' '}
+      <a href="https://github.com/hir3d-one">github.com/hir3d-one</a>). Source
+      code licensed under MIT (or another stated license) may be used according
+      to that license.
     </p>
+    <h2>User content</h2>
     <p>
-      This constitutes the grant of a license, not a transfer of title. This
-      license shall automatically terminate if you violate any of these
-      restrictions or the Terms of Service, and may be terminated by Hir3d at
-      any time.
+      If you submit content to a demo app, you retain ownership of that content.
+      You grant Hir3d a limited license to host and process it solely to operate
+      the showcase. Do not submit confidential or regulated data. Demo data may
+      be deleted at any time.
     </p>
-    <h2>User-Generated Content</h2>
+    <h2>Disclaimer and liability</h2>
     <p>
-      You retain your intellectual property ownership rights over content you
-      submit to us for publication on our website. We will never claim ownership
-      of your content, but we do require a license from you in order to use it.
-    </p>
-    <p>
-      When you use our website or its associated services to post, upload,
-      share, or otherwise transmit content covered by intellectual property
-      rights, you grant to us a non-exclusive, royalty-free, transferable,
-      sub-licensable, worldwide license to use, distribute, modify, run, copy,
-      publicly display, translate, or otherwise create derivative works of your
-      content in a manner that is consistent with your privacy preferences and
-      our Privacy Policy.
-    </p>
-    <p>
-      The license you grant us can be terminated at any time by deleting your
-      content or account. However, to the extent that we (or our partners) have
-      used your content in connection with commercial or sponsored content, the
-      license will continue until the relevant commercial or post has been
-      discontinued by us.
-    </p>
-    <p>
-      You give us permission to use your username and other identifying
-      information associated with your account in a manner that is consistent
-      with your privacy preferences, and our Privacy Policy.
-    </p>
-    <h2>Liability</h2>
-    <p>
-      Our website and the materials on our website are provided on an &apos;as is&apos;
-      basis. To the extent permitted by law, Hir3d makes no warranties,
-      expressed or implied, and hereby disclaims and negates all other
-      warranties including, without limitation, implied warranties or conditions
-      of merchantability, fitness for a particular purpose, or non-infringement
-      of intellectual property, or other violation of rights.
-    </p>
-    <p>
-      In no event shall Hir3d or its suppliers be liable for any consequential
-      loss suffered or incurred by you or any third party arising from the use
-      or inability to use this website or the materials on this website, even if
-      Hir3d or an authorized representative has been notified, orally or in
-      writing, of the possibility of such damage.
-    </p>
-    <p>
-      In the context of this agreement, “consequential loss” includes any
-      consequential loss, indirect loss, real or anticipated loss of profit,
-      loss of benefit, loss of revenue, loss of business, loss of goodwill, loss
-      of opportunity, loss of savings, loss of reputation, loss of use and/or
-      loss or corruption of data, whether under statute, contract, equity, tort
-      (including negligence), indemnity, or otherwise.
-    </p>
-    <p>
-      Because some jurisdictions do not allow limitations on implied warranties,
-      or limitations of liability for consequential or incidental damages, these
-      limitations may not apply to you.
-    </p>
-    <h2>Accuracy of Materials</h2>
-    <p>
-      The materials appearing on our website are not comprehensive and are for
-      general information purposes only. Hir3d does not warrant or make any
-      representations concerning the accuracy, likely results, or reliability of
-      the use of the materials on this website, or otherwise relating to such
-      materials or on any resources linked to this website.
+      The showcase is provided &apos;as is&apos; without warranties of any kind.
+      To the fullest extent permitted by law, Hir3d is not liable for any
+      indirect, incidental, or consequential damages arising from use of or
+      inability to use the showcase.
     </p>
     <h2>Links</h2>
     <p>
-      Hir3d has not reviewed all of the sites linked to its website and is not
-      responsible for the contents of any such linked site. The inclusion of any
-      link does not imply endorsement, approval, or control by Hir3d of the
-      site. Use of any such linked site is at your own risk and we strongly
-      advise you make your own investigations with respect to the suitability of
-      those sites.
+      Links to third-party sites (including Vercel-hosted apps and GitHub) are
+      provided for convenience. Hir3d does not control those sites and is not
+      responsible for their content or practices.
     </p>
     <h2>Pricing</h2>
     <p>
-      The latest pricing can be found on our <a href="/pricing">Pricing</a>{' '}
-      page. Our pricing is subject to change at any time. We reserve the right
-      to modify our pricing for any reason, including but not limited to changes
-      in market conditions, cost of goods or services, or changes in our
-      business model. Any changes to our pricing will be communicated to our
-      customers through our website or through other means, such as email.
-      Customers will be responsible for any price changes, and will be given the
-      opportunity to cancel their subscription before the new pricing takes
-      effect.
+      The <Link href="/pricing">Pricing</Link> page shows historical plan
+      structure for portfolio context. It does not constitute an offer to sell
+      subscriptions.
     </p>
-    <h2>Right to Terminate</h2>
+    <h2>Governing law</h2>
     <p>
-      We may suspend or terminate your right to use our website and terminate
-      these Terms of Service immediately upon written notice to you for any
-      breach of these Terms of Service.
+      These Terms are governed by the laws of Spain. You submit to the exclusive
+      jurisdiction of the courts of Spain, without prejudice to mandatory
+      consumer protections that may apply in your country of residence.
     </p>
-    <h2>Severance</h2>
+    <h2>Contact</h2>
     <p>
-      Any term of these Terms of Service which is wholly or partially void or
-      unenforceable is severed to the extent that it is void or unenforceable.
-      The validity of the remainder of these Terms of Service is not affected.
-    </p>
-    <h2>Governing Law</h2>
-    <p>
-      These Terms of Service are governed by and construed in accordance with
-      the laws of Australia. You irrevocably submit to the exclusive
-      jurisdiction of the courts in that State or location.
+      There is no sales or support inbox for this showcase. For repository or
+      portfolio questions, use{' '}
+      <a href="https://github.com/hir3d-one">github.com/hir3d-one</a>.
     </p>
   </>
 );

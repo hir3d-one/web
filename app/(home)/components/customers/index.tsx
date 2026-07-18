@@ -6,11 +6,8 @@ import { LazyMotion, domAnimation, m, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import type { ComponentProps } from 'react';
-import { useTheme } from 'next-themes';
 
-type CustomersProperties = ComponentProps<'section'> & {
-  readonly count: number;
-};
+type CustomersProperties = ComponentProps<'section'>;
 
 import Elvaston from './logos/elvaston.png';
 import Qam from './logos/qam.png';
@@ -56,16 +53,10 @@ const logos = [
 
 export const Customers = ({
   className,
-  count,
   ...properties
 }: CustomersProperties) => {
   const reference = useRef<HTMLDivElement>(null);
   const inView = useInView(reference, { once: true, amount: 'some' });
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === 'dark';
-
-  // Round count down to the nearest 50
-  const closest = Math.floor(count / 50) * 50;
 
   return (
     <section
@@ -81,7 +72,7 @@ export const Customers = ({
             animate={{ opacity: inView ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
-            Join {closest}+ companies hiring talent with HIR3D
+            Organizations that explored hiring with Hir3d
           </m.p>
           <div className="grid w-full grid-cols-2 gap-x-8 gap-y-14 place-items-center sm:grid-cols-5 sm:gap-x-6">
             {logos.map(({ src, name, className, customStyle }, index) => (

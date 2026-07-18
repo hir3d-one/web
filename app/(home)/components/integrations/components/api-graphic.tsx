@@ -1,11 +1,11 @@
 import { CodeBlock } from '@/components/code-block';
 
 const codeString = `const payload = {
-  title: 'Make the logo bigger',                          // String, required
-  text: 'The logo is too small, please make it bigger',   // String, required
+  title: 'Senior backend engineer',                       // String, required
+  text: 'Looking for Node.js and PostgreSQL experience',  // String, required
   user: {                                                 // Object, optional 
-    name: 'John Doe',                                     // String, required
-    email: 'john@acme.com',                               // String, required
+    name: 'Jane Recruiter',                               // String, required
+    email: 'jane@acme.com',                               // String, required
   },
   organization: {                                         // Object, optional
     name: 'Acme Inc',                                     // String, required
@@ -13,7 +13,7 @@ const codeString = `const payload = {
   },
 }
   
-const response = await fetch('https://app.eververse.ai/••••••••', {
+const response = await fetch('https://hir3d-app.vercel.app/api/••••••••', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

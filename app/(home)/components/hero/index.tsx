@@ -13,56 +13,50 @@ import type { ComponentProps } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { CTAButton } from '../cta-button';
 
-type HeroProperties = ComponentProps<'section'> & {
-  readonly latestUpdate: string | undefined;
-};
+type HeroProperties = ComponentProps<'section'>;
 
-export const Hero = ({
-  className,
-  latestUpdate,
-  ...properties
-}: HeroProperties) => (
+export const Hero = ({ className, ...properties }: HeroProperties) => (
   <section className={cn('overflow-hidden', className)} {...properties}>
     <LazyMotion features={domAnimation}>
       <Container className="border-x p-4 text-center">
         <div className="rounded-xl border bg-background p-8 shadow-sm sm:p-16 md:p-24">
           <div className="relative z-10 flex flex-col items-center">
-            {latestUpdate ? (
-              <m.div
-                animate={{ opacity: 1, translateY: 0 }}
-                initial={{ opacity: 0, translateY: 16 }}
-                transition={{ duration: 1, ease: 'easeInOut' }}
-                className="w-full"
+            <m.div
+              animate={{ opacity: 1, translateY: 0 }}
+              initial={{ opacity: 0, translateY: 16 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              className="w-full"
+            >
+              <a
+                aria-label="Open Hir3d app showcase"
+                href={`${sites.app}/`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  aria-label="View latest update on Hir3d changelog page"
-                  href={`${sites.app}/`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Badge
+                  variant="outline"
+                  className="max-w-full gap-2 rounded-full py-0.5 pr-3 pl-0.5 font-medium"
                 >
-                  <Badge
-                    variant="outline"
-                    className="max-w-full gap-2 rounded-full py-0.5 pr-3 pl-0.5 font-medium"
+                  <span
+                    className="shrink-0 truncate rounded-full bg-foreground/5 px-2.5 py-1 text-muted-foreground text-xs"
+                    style={{
+                      boxShadow: 'inset 0 1px 0 0 hsla(0,0%,100%,.08)',
+                    }}
                   >
-                    <span
-                      className="shrink-0 truncate rounded-full bg-foreground/5 px-2.5 py-1 text-muted-foreground text-xs"
-                      style={{
-                        boxShadow: 'inset 0 1px 0 0 hsla(0,0%,100%,.08)',
-                      }}
-                    >
-                      Latest update
+                    Portfolio
+                  </span>
+                  <span className="flex items-center gap-1 truncate">
+                    <span className="w-full truncate">
+                      Deprecated product showcase
                     </span>
-                    <span className="flex items-center gap-1 truncate">
-                      <span className="w-full truncate">{latestUpdate}</span>
-                      <ArrowUpRightIcon
-                        size={16}
-                        className="shrink-0 text-muted-foreground"
-                      />
-                    </span>
-                  </Badge>
-                </a>
-              </m.div>
-            ) : null}
+                    <ArrowUpRightIcon
+                      size={16}
+                      className="shrink-0 text-muted-foreground"
+                    />
+                  </span>
+                </Badge>
+              </a>
+            </m.div>
             <Prose className="mt-8 max-w-6xl">
               <m.h1
                 initial={{ opacity: 0, translateY: 16 }}
@@ -82,10 +76,9 @@ export const Hero = ({
                 transition={{ duration: 1, ease: 'easeInOut', delay: 1 }}
               >
                 <Balancer>
-                  Revolutionize your hiring with AI-powered precision. Screen
-                  smarter, match faster, and build stronger teams by automating
-                  the tedious parts of recruitment while focusing on what
-                  matters - finding exceptional talent.
+                  Hir3d was an AI recruiting product for screening resumes,
+                  matching candidates, and streamlining hiring workflows. This
+                  site remains as a portfolio showcase of the product experience.
                 </Balancer>
               </m.p>
             </Prose>
@@ -97,7 +90,7 @@ export const Hero = ({
             >
               <CTAButton size="lg" />
               <Button variant="outline" size="lg" asChild>
-                <Link href="/pricing">See pricing</Link>
+                <Link href="/pricing">See historical pricing</Link>
               </Button>
             </m.div>
           </div>

@@ -8,7 +8,7 @@ import { ArrowRightIcon } from 'lucide-react';
 export const CTAButton = ({ size, ...properties }: ButtonProps) => (
   <Button asChild size={size} {...properties}>
     <a href={sites.app}>
-      <span className="relative z-10">Get started for free</span>
+      <span className="relative z-10">Open the app</span>
       <ArrowRightIcon size={size ? 12 : 16} />
     </a>
   </Button>

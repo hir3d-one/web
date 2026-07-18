@@ -1,12 +1,12 @@
 import { Container } from '@/components/container';
+import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
 import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
-import { ContactForm } from './components/contact-form';
 
 const title = 'Contact';
 const description =
-  "Let us know what's on your mind. We'll get back to you as soon as possible.";
+  'Hir3d is a deprecated portfolio showcase. Contact for sales and support is closed.';
 
 export const metadata: Metadata = createMetadata({
   title,
@@ -25,7 +25,20 @@ const Contact = () => (
         </Prose>
       </div>
       <div className="py-4 sm:p-8">
-        <ContactForm />
+        <Prose className="max-w-none">
+          <h2 className="mt-0">Contact unavailable</h2>
+          <p>
+            This marketing site is kept online as a portfolio showcase of a
+            retired AI recruiting product. The contact form is disabled — messages
+            are not delivered, and there is no sales or support inbox.
+          </p>
+          <p>
+            For questions about the open-source repositories or this showcase,
+            use the{' '}
+            <Link href="https://github.com/hir3d-one">hir3d-one GitHub org</Link>
+            .
+          </p>
+        </Prose>
       </div>
     </Container>
   </section>

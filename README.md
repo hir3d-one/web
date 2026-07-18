@@ -43,3 +43,7 @@ Linked to the `hir3d-web` Vercel project; deploys from the repo root with Node.j
 | [hir3d-one/app](https://github.com/hir3d-one/app) | Recruiter dashboard |
 | [hir3d-one/upload](https://github.com/hir3d-one/upload) | Candidate CV upload portal |
 | [hir3d-one/cli](https://github.com/hir3d-one/cli) | Dev CLI for ingestion and search |
+
+## License
+
+MIT — see [LICENSE](./LICENSE).

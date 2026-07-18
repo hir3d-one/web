@@ -6,14 +6,12 @@ import { Tooltip } from '@/components/precomposed/tooltip';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
-  MAX_FREE_CHANGELOGS,
-  MAX_FREE_FEATURES,
-  MAX_FREE_FEEDBACK,
-  MAX_FREE_INITIATIVES,
-  MAX_FREE_INITIATIVE_PAGES,
-  MAX_FREE_INITIATIVE_UPDATES,
-  MAX_FREE_MEMBERS,
-  MAX_FREE_RELEASES,
+  MAX_FREE_CANDIDATES,
+  MAX_FREE_CV_ANALYSES,
+  MAX_FREE_JOBS,
+  MAX_FREE_ORGS,
+  MAX_FREE_SEARCHES,
+  MAX_FREE_SEATS,
 } from '@/lib/consts';
 import { sites } from '@/lib/sites';
 import { CheckIcon, HelpCircleIcon } from 'lucide-react';
@@ -24,354 +22,148 @@ const groups = [
     name: 'Workspace',
     features: [
       {
-        label: 'Users',
-        description: 'Invite your team to your workspace.',
-        plans: [MAX_FREE_MEMBERS, 'Unlimited', 'Unlimited'],
+        label: 'Seats',
+        description: 'Invite recruiters and hiring managers to your workspace.',
+        plans: [MAX_FREE_SEATS, 'Unlimited', 'Unlimited'],
       },
       {
-        label: 'AI Digest',
-        description: 'Get a daily digest of your workspace activity.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'Presence',
-        description: "See who's online.",
-        plans: [false, true, true],
+        label: 'Organizations',
+        description: 'Run hiring under one or more company workspaces.',
+        plans: [MAX_FREE_ORGS, 3, 'Unlimited'],
       },
       {
         label: 'Multifactor authentication',
-        description: 'Add an extra layer of security.',
+        description: 'Add an extra layer of security for your team.',
         plans: [false, false, true],
       },
       {
         label: 'Advanced SSO',
-        description: 'Sign up with custom SAML SSO.',
+        description: 'Sign in with custom SAML SSO.',
         plans: [false, false, true],
-      },
-    ],
-  },
-  {
-    name: 'Initiatives',
-    features: [
-      {
-        label: 'Create initiatives',
-        description: "Track your team's initiatives.",
-        plans: [MAX_FREE_INITIATIVES, 'Unlimited', 'Unlimited'],
-      },
-      {
-        label: 'Pages',
-        description: 'Create documents and canvases.',
-        plans: [MAX_FREE_INITIATIVE_PAGES, true, true],
-      },
-      {
-        label: 'Send email updates',
-        description: 'Send email updates to your team.',
-        plans: [MAX_FREE_INITIATIVE_UPDATES, true, true],
-      },
-      {
-        label: 'Add external links',
-        description: 'Link to external resources.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Tailored roadmap',
-        description: 'Generate a tailored roadmap for your initiative.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'AI Q&A',
-        description: 'Ask AI questions about your initiative.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI-generated updates',
-        description: 'Automatically generate updates for your initiative.',
-        plans: [false, true, true],
-      },
-    ],
-  },
-  {
-    name: 'Feedback',
-    features: [
-      {
-        label: 'Add feedback',
-        description: 'Collate feedback from your ecosystem.',
-        plans: [MAX_FREE_FEEDBACK, 'Unlimited', 'Unlimited'],
-      },
-      {
-        label: 'Triage feedback',
-        description: 'Connect feedback to features.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Audio and video feedback',
-        description: 'Upload audio and video feedback.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI sentiment detection',
-        description: 'Detect emotions in feedback.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI analysis',
-        description:
-          'Analyze feedback to extract pain points, desired outcomes and more.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI transcription',
-        description: 'Transcribe audio and video feedback.',
-        plans: [false, true, true],
-      },
-    ],
-  },
-  {
-    name: 'Features',
-    features: [
-      {
-        label: 'Create features',
-        description: 'Track feature requests from users.',
-        plans: [MAX_FREE_FEATURES, 'Unlimited', 'Unlimited'],
-      },
-      {
-        label: 'Groups and products',
-        description: 'Organize features into collections.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'RICE scoring',
-        description: 'Prioritize features with RICE scoring.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Canvas',
-        description: 'Brainstorm solutions on a visual canvas.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Customizable statuses',
-        description: 'Create your own statuses.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI RICE scoring',
-        description: 'Automatically best-guess prioritization.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'Custom fields',
-        description: 'Add custom fields to your features.',
-        plans: [false, true, true],
-      },
-      {
-        label: 'AI-assisted writing',
-        description: 'Get writing suggestions from AI.',
-        plans: [false, true, true],
-      },
-    ],
-  },
-  {
-    name: 'Roadmap',
-    features: [
-      {
-        label: 'Create roadmap',
-        description: 'Create a private roadmap for your team.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Roadmap customization',
-        description: 'Modify timeframe, grouping and more.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Roadmap events',
-        description: 'Add events to your roadmap.',
-        plans: [true, true, true],
-      },
-    ],
-  },
-  {
-    name: 'Activity',
-    features: [
-      {
-        label: 'Activity feed',
-        description: "See your team's activity.",
-        plans: [true, true, true],
       },
       {
         label: 'Audit logs',
-        description: 'Track changes in your workspace.',
+        description: 'Track changes across your recruiting workspace.',
         plans: [false, false, true],
       },
     ],
   },
   {
-    name: 'Changelog',
+    name: 'Candidate search',
     features: [
       {
-        label: 'Create changelog',
-        description: 'Share product updates with customers.',
-        plans: [MAX_FREE_CHANGELOGS, 'Unlimited', 'Unlimited'],
+        label: 'AI candidate searches',
+        description: 'Search and rank candidates with natural-language queries.',
+        plans: [MAX_FREE_SEARCHES, 'Unlimited', 'Unlimited'],
       },
       {
-        label: 'AI-generated updates',
-        description: 'Automatically create changelog updates.',
+        label: 'Candidate profiles',
+        description: 'Store and browse candidate profiles in one place.',
+        plans: [MAX_FREE_CANDIDATES, 'Unlimited', 'Unlimited'],
+      },
+      {
+        label: 'Saved searches',
+        description: 'Reuse search criteria across open roles.',
+        plans: [true, true, true],
+      },
+      {
+        label: 'Match scoring',
+        description: 'See how well candidates fit a role.',
+        plans: [true, true, true],
+      },
+      {
+        label: 'Semantic ranking',
+        description: 'Rank results by skills, experience, and role fit.',
         plans: [false, true, true],
       },
     ],
   },
   {
-    name: 'Integrations',
+    name: 'CV analysis',
     features: [
       {
-        label: 'Import',
-        description: 'Import data from Productboard, Canny and Markdown files.',
+        label: 'CV / resume analysis',
+        description: 'Extract skills, experience, and highlights from resumes.',
+        plans: [MAX_FREE_CV_ANALYSES, 'Unlimited', 'Unlimited'],
+      },
+      {
+        label: 'Bulk CV upload',
+        description: 'Upload multiple resumes at once via the upload portal.',
         plans: [true, true, true],
       },
       {
-        label: 'Jira',
-        description: 'Sync Eververse features to Jira tickets.',
+        label: 'Skills extraction',
+        description: 'Automatically tag candidates with inferred skills.',
         plans: [true, true, true],
       },
       {
-        label: 'GitHub',
-        description: 'Sync Eververse features to GitHub issues.',
-        plans: [true, true, true],
+        label: 'AI screening notes',
+        description: 'Generate short screening summaries for each candidate.',
+        plans: [false, true, true],
       },
       {
-        label: 'Linear',
-        description: 'Sync Eververse features to Linear issues.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Intercom',
-        description: 'Create Eververse feedback from Intercom conversations.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Slack',
-        description: 'Create Eververse feedback from Slack messages.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Zapier',
-        description: 'Connect with 2000+ apps.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Email',
-        description: 'Forward feedback from your inbox.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'API',
-        description: 'Build custom integrations.',
+        label: 'Custom screening criteria',
+        description: 'Define must-have and nice-to-have criteria per role.',
         plans: [false, true, true],
       },
     ],
   },
   {
-    name: 'Portal',
+    name: 'Jobs & pipeline',
     features: [
       {
-        label: 'Portal',
-        description: 'Customize your feedback portal',
+        label: 'Open roles',
+        description: 'Track active job openings in your workspace.',
+        plans: [MAX_FREE_JOBS, 'Unlimited', 'Unlimited'],
+      },
+      {
+        label: 'Hiring pipeline',
+        description: 'Move candidates through screening stages.',
         plans: [true, true, true],
       },
       {
-        label: 'Portal roadmap',
-        description: 'Share your roadmap with customers.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Customize portal statuses',
-        description: 'Map your statuses to your customers.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Portal changelog',
-        description: 'Share product updates with customers.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Feature voting',
-        description: 'Let customers vote on features.',
+        label: 'Custom stages',
+        description: 'Create your own pipeline statuses.',
         plans: [false, true, true],
       },
       {
-        label: 'Idea submission',
-        description: 'Let customers submit their own ideas.',
+        label: 'Team notes & comments',
+        description: 'Collaborate on candidates with your hiring team.',
+        plans: [true, true, true],
+      },
+      {
+        label: 'Role templates',
+        description: 'Reuse job and screening templates across openings.',
         plans: [false, true, true],
       },
     ],
   },
   {
-    name: 'Widget',
+    name: 'Integrations & API',
     features: [
       {
-        label: 'Create a widget',
-        description: 'Embed your roadmap and changelog.',
+        label: 'CSV import / export',
+        description: 'Import and export candidate data as CSV.',
         plans: [true, true, true],
       },
       {
-        label: 'Collect feedback',
-        description: 'Let users submit feedback in your widget.',
+        label: 'Email notifications',
+        description: 'Get notified about pipeline activity.',
         plans: [true, true, true],
       },
       {
-        label: 'Recent updates',
-        description: 'Show recent updates in your widget.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Upcoming features',
-        description: 'Show upcoming features in your widget.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Custom links',
-        description: 'Add custom links to your widget.',
+        label: 'Webhook events',
+        description: 'Receive hiring events in your own systems.',
         plans: [false, true, true],
       },
-    ],
-  },
-  {
-    name: 'Releases',
-    features: [
       {
-        label: 'Create releases',
-        description: 'Manage your product releases and link features.',
-        plans: [MAX_FREE_RELEASES, true, true],
+        label: 'REST API access',
+        description: 'Build custom recruiting integrations.',
+        plans: [false, true, true],
       },
       {
-        label: 'Sync with Jira',
-        description: 'Sync Eververse Releases with Jira Fix Versions.',
-        plans: [true, true, true],
-      },
-    ],
-  },
-  {
-    name: 'Data',
-    features: [
-      {
-        label: 'Users',
-        description: 'Keep track of every user who has submitted feedback.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Companies',
-        description: 'Keep track of every company that has submitted feedback.',
-        plans: [true, true, true],
-      },
-      {
-        label: 'Enrichment',
-        description: 'Automatically enrich user and company data.',
-        plans: [false, false, true],
-      },
-      {
-        label: 'Segmentation',
-        description: 'Segment your users and companies.',
+        label: 'Dedicated support',
+        description: 'Priority help for showcase exploration and self-hosting.',
         plans: [false, false, true],
       },
     ],
@@ -388,27 +180,27 @@ export const PricingTable = ({
   const plans = [
     {
       name: 'Hobby',
-      description: 'For getting started',
+      description: 'Explore the showcase',
       price: 'Free forever',
-      cta: 'Get started for free',
+      cta: 'Open the app',
       link: `${sites.app}/`,
-      caption: 'No credit card required.',
+      caption: 'Portfolio showcase — not an active SaaS trial.',
     },
     {
       name: 'Pro',
-      description: 'For small teams',
+      description: 'For small recruiting teams',
       price: annualPrice,
-      cta: 'Start your free trial',
+      cta: 'View showcase',
       link: `${sites.app}/`,
-      caption: `Billed annually, or $${monthlyPrice} billed monthly.`,
+      caption: `Historical plan at $${monthlyPrice}/user/mo billed monthly.`,
     },
     {
       name: 'Enterprise',
-      description: 'For large teams',
+      description: 'For large organizations',
       price: 'Custom',
-      cta: 'Get in touch',
-      link: '/contact',
-      caption: "Let's chat.",
+      cta: 'View on GitHub',
+      link: 'https://github.com/hir3d-one',
+      caption: 'Contact via GitHub — sales is closed.',
     },
   ];
 

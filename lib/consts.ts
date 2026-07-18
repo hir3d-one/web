@@ -2,11 +2,9 @@ import { sites } from './sites';
 
 export const baseUrl = sites.web;
 
-export const MAX_FREE_CHANGELOGS = 10;
-export const MAX_FREE_FEATURES = 10;
-export const MAX_FREE_FEEDBACK = 10;
-export const MAX_FREE_INITIATIVES = 10;
-export const MAX_FREE_INITIATIVE_PAGES = 10;
-export const MAX_FREE_INITIATIVE_UPDATES = 10;
-export const MAX_FREE_MEMBERS = 10;
-export const MAX_FREE_RELEASES = 10;
+export const MAX_FREE_SEATS = 3;
+export const MAX_FREE_SEARCHES = 25;
+export const MAX_FREE_CV_ANALYSES = 50;
+export const MAX_FREE_CANDIDATES = 100;
+export const MAX_FREE_JOBS = 5;
+export const MAX_FREE_ORGS = 1;

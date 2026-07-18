@@ -1,13 +1,12 @@
-import Climate from '@/components/climate';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
 import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import { PricingTable } from './components/pricing-table';
 
-const title = 'Simple, transparent pricing';
+const title = 'Historical pricing';
 const description =
-  'No hidden fees. No surprises. 15-day trial. Cancel anytime.';
+  'Plans Hir3d offered when the product was live. This site is a deprecated portfolio showcase — billing and trials are closed.';
 
 export const metadata: Metadata = createMetadata({
   title,
@@ -15,7 +14,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 const Pricing = () => {
-  // Static prices instead of fetching from Stripe
+  // Static historical prices (product is no longer sold)
   const monthlyPrice = 15;
   const annualPrice = 12;
 
@@ -29,13 +28,7 @@ const Pricing = () => {
           <p className="text-center text-lg">{description}</p>
         </header>
       </Prose>
-      <PricingTable
-        monthlyPrice={monthlyPrice}
-        annualPrice={annualPrice}
-      />
-      <div className="flex justify-center py-16">
-        <Climate />
-      </div>
+      <PricingTable monthlyPrice={monthlyPrice} annualPrice={annualPrice} />
     </Container>
   );
 };

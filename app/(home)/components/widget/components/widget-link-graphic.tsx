@@ -20,11 +20,11 @@ const links = [
     icon: SlackIcon,
   },
   {
-    name: 'Request a free trial',
+    name: 'Open the showcase',
     icon: ChevronsRightIcon,
   },
   {
-    name: 'Upgrade your plan',
+    name: 'View on GitHub',
     icon: CircleArrowUpIcon,
   },
 ];

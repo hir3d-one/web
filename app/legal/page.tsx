@@ -6,7 +6,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const title = 'Legal';
-const description = 'Legal information for Hir3d.';
+const description =
+  'Legal information for the Hir3d portfolio showcase (deprecated product).';
 
 export const metadata: Metadata = createMetadata({
   title,
